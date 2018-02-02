@@ -1,0 +1,27 @@
+REpresentational State Transfer
+Orientado a resourses (recursos)
+Stateless (não guarda estado, cookies e sessões não funcionam)
+HTTP Status code (404, 500 etc)
+HTTPS methods (GET-LISTA/VISUALIZA, POST-INSERE, PUT-ATUALIZA, DELETE-REMOVE e OPTIONS-Descobre quais opções de requisição permitidas para um determinado recurso no servidor restful)
+HTTP headers (json ou xml) - http://servidor.com/api/v1/produto.json
+Negociação de conteúdo 
+
+200 - tudo ok
+301 - redirecionamento permanente
+302 - redirecionamento temporário
+401 - quando a autenticação é possível, mas não conseguiu ou ainda não foram fornecidos. A resposta deve incluir um cabeçalho do campo www-authenticate contendo um desafio aplicável ao recurso solicitado.
+404 - página não encontrada
+422 - falha na validação
+500 - erro no servidor
+
+composer create-project slim/slim-skeleton . --prefer-dist
+
+php -S localhost:8000 -t public
+
+composer require illuminate/database
+
+composer require robmorgan/phinx
+
+
+
+
