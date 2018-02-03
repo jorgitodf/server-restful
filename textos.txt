@@ -1,17 +1,17 @@
 REpresentational State Transfer
 Orientado a resourses (recursos)
-Stateless (não guarda estado, cookies e sessões não funcionam)
+Stateless (nï¿½o guarda estado, cookies e sessï¿½es nï¿½o funcionam)
 HTTP Status code (404, 500 etc)
-HTTPS methods (GET-LISTA/VISUALIZA, POST-INSERE, PUT-ATUALIZA, DELETE-REMOVE e OPTIONS-Descobre quais opções de requisição permitidas para um determinado recurso no servidor restful)
+HTTPS methods (GET-LISTA/VISUALIZA, POST-INSERE, PUT-ATUALIZA, DELETE-REMOVE e OPTIONS-Descobre quais opï¿½ï¿½es de requisiï¿½ï¿½o permitidas para um determinado recurso no servidor restful)
 HTTP headers (json ou xml) - http://servidor.com/api/v1/produto.json
-Negociação de conteúdo 
+Negociaï¿½ï¿½o de conteï¿½do 
 
 200 - tudo ok
 301 - redirecionamento permanente
-302 - redirecionamento temporário
-401 - quando a autenticação é possível, mas não conseguiu ou ainda não foram fornecidos. A resposta deve incluir um cabeçalho do campo www-authenticate contendo um desafio aplicável ao recurso solicitado.
-404 - página não encontrada
-422 - falha na validação
+302 - redirecionamento temporï¿½rio
+401 - quando a autenticaï¿½ï¿½o ï¿½ possï¿½vel, mas nï¿½o conseguiu ou ainda nï¿½o foram fornecidos. A resposta deve incluir um cabeï¿½alho do campo www-authenticate contendo um desafio aplicï¿½vel ao recurso solicitado.
+404 - pï¿½gina nï¿½o encontrada
+422 - falha na validaï¿½ï¿½o
 500 - erro no servidor
 
 composer create-project slim/slim-skeleton . --prefer-dist
@@ -22,6 +22,19 @@ composer require illuminate/database
 
 composer require robmorgan/phinx
 
+composer install --no-scripts
+
+vendor/bin/phinx
+
+vendor/bin/phinx create UsersTable
+
+vendor/bin/phinx migrate
+
+composer dump
+
+composer require firebase/php-jwt
+
+composer require tuupola/slim-jwt-auth
 
 
 

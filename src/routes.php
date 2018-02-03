@@ -3,6 +3,8 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 
+$container['db'];
+
 // Routes
 
 $app->get('/[{name}]', function (Request $request, Response $response, array $args) {
@@ -12,3 +14,11 @@ $app->get('/[{name}]', function (Request $request, Response $response, array $ar
     // Render index view
     return $this->renderer->render($response, 'index.phtml', $args);
 });
+
+$app->options('/{routes:.+}', function ($req, $res, $args) {
+    return $res;
+});
+
+require __DIR__ . '/routes/auth.php';
+require __DIR__ . '/routes/users.php';
+require __DIR__ . '/routes/tickets.php';
